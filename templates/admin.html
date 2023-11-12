@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Admin Dashboard</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='index.css') }}">
+</head>
+<body>
+    
+    <div class="main">
+        <div > 
+            <a href="{{ url_for('home') }}"> <button class="back"> Back</button></a>
+        </div>
+        
+        <div class="cam_space1">
+            <div class="cam_new">
+                <p style="color: beige;">Click here for add new member</p>
+            
+            <a href="{{ url_for('add_cam') }}"> <button class="adm_btn">add member</button></a>
+            </div>
+            
+            
+           
+        </div>
+        <div class="add">
+            <div class="print"> 
+                <p style="color: beige;">Print Attendence</p>
+                <form action="/print_attendance" method="post">
+                    <label for="from">From:</label>
+                    <input type="date" id="date" name="strt_date" required><br><br>
+                    <label for="to">To:</label>
+                    <input type="date" id="date" name="end_date"   required><br><br>
+                    <input type="submit" value="print" >
+
+                </form>
+            </div>
+            <div class="add_mbr">
+                <p style="color: beige;">Give the following details for adding new member</p>
+                <form action="/add_member" method="post">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" placeholder="Name" required><br><br>
+
+                <label for="age">Age:</label>
+                <input type="number" id="name" name="age" placeholder="age"  required><br><br>
+                
+                <label for="email">email:</label>
+                <input type="text" id="name" name="email" placeholder="xyz@gmail.com"  required><br><br>
+                
+                <label for="department">Department:</label>
+                <input type="text" id="dep" name="dep" placeholder="Department"  required><br><br>
+
+                <input type="submit" value="add member">
+
+            </form>
+
+            </div>
+           
+            
+
+        </div>
+    </div>
+</body>
+</html>

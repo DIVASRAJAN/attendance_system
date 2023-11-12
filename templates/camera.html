@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>student portal</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='index.css') }}">
+</head>
+<body>
+   <div class="main">
+    <div class="left">
+        <h1 class="name" style="color: beige;">ATTENDANCE SYSTEM</h1>
+        <div class="cam_space">
+            <img src="{{ url_for('video_feed') }}" width="702" height="690",border_radius="10px">
+            <script>
+                // Use JavaScript to automatically redirect to the home page after 5 seconds
+                setTimeout(function () {
+                    window.location.href = "{{ url_for('home') }}";
+                 }, 5000); 
+            </script>
+
+        </div>
+
+    </div>
+    <div class="right">
+        <div class="time">
+            <h4 style="color: beige;">{{ live_time }}</h4>
+        </div>
+        <div class="mem_details">
+            <h3>{{ name }}</h3>
+            <h3>{{ reg_no }}</h3>
+            <h3>{{ dep }}</h3>
+            <h3>Present</h3>
+
+        </div>
+    </div>
+</div>
+
+    
+    
+</body>
+</html>

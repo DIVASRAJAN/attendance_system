@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Attendence system</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='index.css') }}">
+    <script src="https://kit.fontawesome.com/a6602f2ec3.js" crossorigin="anonymous"></script>
+   
+</head>
+<body>
+    <div class="main"  >
+     <div class="left1">
+        <div class="cam_des">
+            <h4 style="color: beige;">Register Your Presence With a Click</h4>
+        </div>
+       
+        <div class="cam_div">
+           <a href="{{ url_for('camera') }}"> <button class="logo"><i class="fa-solid fa-camera"></i></i></button></a>
+        </div>
+        <div class="adm_div">
+            <a href="{{ url_for('admin_page') }}"> <button class="adm_btn">admin</button></a>
+        </div>
+         
+         
+ 
+     </div>
+     <div class="right1">
+         <div class="time">
+            <h3 style="color: beige;">{{ live_time }}</h3>
+         </div>
+          <div class="name">
+            <h1 style="color: beige;">ATTENDANCE SYSTEM</h1>
+        </div>
+        <div class="cl_details">
+            <div class="text">
+                <h1>Institution Name</h1>
+                <h3>tag line</h3>
+                <h4>address</h4>
+            </div>
+        </div>
+        <div class="man_details">
+            <p>created and maintaining by</p>
+            <p>Akshay  Divas Junaid  </p>
+        </div>
+     </div>
+    </div>
+     
+     
+ </body>
+</html>

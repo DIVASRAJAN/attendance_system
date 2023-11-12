@@ -1,0 +1,162 @@
+*{
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+    
+    
+}
+.main{
+    height: 965px;
+    width: 1853px;;
+    display: flex;
+    background-image: url('blue.avif') ;
+    background-size: cover;
+}
+.right1{
+    width: 60%;
+    height: 100%;
+   
+}
+.left1{
+      width: 40%;
+    height: 100%;
+}
+.left{
+    width: 60%;
+    height: 100%;
+}
+.right{
+    width: 40%;
+    height: 100%;
+}
+.cam_space{
+    width: 61%;
+    height: 70%;
+    margin-top: 7%;
+    margin-left: 20%;
+    border-radius: 10px;
+}
+.name{
+    padding-top: 50px;
+    margin-left: 100px;
+    
+}
+.time{
+    height: 50px;
+    width: 100%;
+    padding-left: 64%;
+    padding-top: 15px;
+}
+.cam_div{
+    height: 150px;
+    width: 150px;
+    margin-top: 0px;
+    margin-left: 300px;
+    padding-top: 40px;
+    padding-left: 10px;
+}
+.adm_div{
+    height: 100px;
+    width: 150px;
+    margin-top: 350px;
+    margin-left: 100px;
+
+}
+.adm_btn{
+    height: 50px;
+    width: 120px;
+    cursor: pointer;
+}
+.adm_btn:hover{
+    background-color:rgba(6, 24, 124, 0.959);
+    color: beige;
+
+}
+.logo{
+    height: 55px;
+    width: 55px; 
+    cursor: pointer;
+}
+.logo :hover{
+    color: rgb(207, 159, 96);
+}
+.cl_details{
+    background-color: aliceblue;
+    height: 530px;
+    width: 500px;
+    margin-top: 50px;
+    margin-left: 345px;
+    opacity: 0.6;
+    display: inline-block;
+    border-radius: 10px;
+
+    
+}
+.man_details{
+    width: 80%;
+    height: 75px;
+    background-color: antiquewhite;
+    margin-left: 135px;
+    margin-top: 135px;
+    opacity: 0.60;
+    text-align: center;
+    border-radius: 10px;
+    padding-top: 10px;
+    
+}
+.cam_space1{
+    height: 690px;
+    width: 702px;
+    background-color: rgba(37, 101, 185, 0.514);
+    margin-top: 6%;
+    margin-left: 100px;
+    border-radius: 10px;
+}
+.text{
+    margin-top: 55px;
+    text-align: center;
+    line-height: 52px;
+    
+}
+.print{
+    margin-top: 50px;
+    margin-left: 100px;
+    padding-left: 50px;
+}
+.add_mbr{
+    margin-top: 70px;
+    margin-left: 100px;
+    padding-left: 50px;
+}
+form{
+    margin-top: 35px;
+
+}
+.cam_des{
+    margin-top: 44%;
+    margin-left: 27%;
+}
+.cam_new{
+    text-align: center;
+    margin-top: 39%;
+    margin-left: 0%;
+    line-height: 45px;
+
+}
+.back{
+    height: 30px;
+    width: 100px;
+    margin-top: 27px;
+    margin-left: 15px;
+}
+.mem_details{
+    background-color: rgba(255, 235, 205, 0.185);
+    height: 360px;
+    width: 290px;
+    margin-top: 265px;
+    border-radius: 10px;
+    color: beige;
+    text-align: center;
+    padding-top: 50px;
+    line-height: 50px;
+}

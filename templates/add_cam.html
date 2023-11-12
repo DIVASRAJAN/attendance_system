@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    
+    <title>Document</title>
+</head>
+<body>
+    <div class="main">
+        <div class="cam_space1">
+            <img src="{{ url_for('video_feed1') }}" width="702" height="690",border_radius="10px">
+            <script>
+                // Use JavaScript to automatically redirect to the home page after 10 seconds
+                setTimeout(function () {
+                    window.location.href = "{{ url_for('admin_page') }}";
+                }, 5000); 
+            </script>
+        </div>
+    </div>
+</body>
+</html>

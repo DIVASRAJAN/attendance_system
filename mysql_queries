@@ -1,0 +1,65 @@
+CREATE DATABASE dl_project;
+USE dl_project;
+
+-- table for store details of students
+CREATE TABLE students (
+            student_id INT AUTO_INCREMENT PRIMARY KEY,
+            name VARCHAR(50) NOT NULL,
+            department varchar(25),
+            email varchar(50),
+            age int);
+
+INSERT INTO students(student_id,name,department,email,age)
+        VALUES (100,'divas','physics','divasthottungal@gmail.com',23)
+INSERT INTO students(name,department,email,age) 
+        VALUES ('akshay','b tech','akshaymanoj18@gmail.com',22),('junaid','ca','cjunaidrahman@gmail.com',22);
+
+
+-- table for marking attendance
+CREATE TABLE attendance (
+            attendance_id INT AUTO_INCREMENT PRIMARY KEY,
+            student_id INT,
+            attendance_date DATE,
+            is_present varchar(25),
+            FOREIGN KEY (student_id) REFERENCES students(student_id)
+     );
+
+
+-- add constraint for not mark attendance for same student in same day
+ALTER TABLE attendance
+            ADD CONSTRAINT unique_attendance
+            UNIQUE KEY (student_id, attendance_date);
+
+-- **************************************************************************************************************************************
+-- sql queries in python programme
+
+-- class_name = name of student
+-- show id on camera page
+SELECT student_id FROM students WHERE name = class_name ;       
+
+-- attendence marking with time
+INSERT INTO attendance (student_id,attendance_date,is_present) 
+            VALUES (id,date,time);
+
+-- show department on camera page 
+SELECT department FROM students WHERE name = class_name;
+
+-- adding new member into sql database 
+INSERT INTO students ( name, age, email, department) 
+            VALUES (name,age,email,department);
+
+
+-- printing attendence sheet for specific dates 
+SELECT students.name,students.student_id,attendance.attendance_date,attendance.is_present 
+            FROM students 
+            join attendance 
+            ON students.student_id = attendance.student_id
+            WHERE attendance.attendance_date 
+            BETWEEN '2023-10-15' and '2023-10-16' 
+            ORDER BY attendance.attendance_date;
+
+-- selecting absentes
+SELECT s.name,s.email 
+            FROM students s 
+            LEFT JOIN attendance a ON s.student_id = a.student_id AND a.attendance_date = '2023-10-16'  
+            WHERE a.student_id IS NULL
