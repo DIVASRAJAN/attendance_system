@@ -1,4 +1,4 @@
-# attendance_system
+# Attendance system
 Automated attendance system using face recognition - deep learning
 
 used a pre trained model for face recognition, VGG16 is used here.
