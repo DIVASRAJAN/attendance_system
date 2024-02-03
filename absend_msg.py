@@ -33,7 +33,7 @@ def send_emails():
 
         # Email configuration
         sender_email = 'divasdivu98@gmail.com'
-        app_password = 'qsgd bvfp zbap spse'  # If you generated an App Password
+        app_password = 'qsgd bvfp zbap ****'  # If you generated an App Password
         recipient_email = i[1]
         
 
